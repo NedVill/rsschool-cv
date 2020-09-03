@@ -1,15 +1,17 @@
-# Поляков Дмитрий
+# Dmitry Polyakov
 
-**Email:** 356prodigy356@mail.ru **Telegram:** NedVill
+## d.polyakov.dev@mail.ru
 
-**Навыки:** HTML, CSS, SASS, JS, PHP, MYSQL
+Skills:
 
-**О себе** Опыт разработки сайтов на CMF MODX. 3 года опыта верстки адаптивных сайтов, доработок различного функционала. В свободное время продолжаю самосовершенствоваться в сфере веб разработки. **Медленно, но верно** стараюсь изучать _английский язык_.
-_Образование высшее_, инженер - специалист (Специальность - наземные транспортно-технологические средства).
+* HTML, CSS, SASS
+* Javascript, fundamental PHP
+* Fundamental OOP
+* Fundamental mysql
+* Working with Gulp
+* CMF Modx
+* some API's
 
-**Опыт работы с API:** 
-1. AmoCRM
-1. Armtek API
-1. Небольшой опыт с API карт Google и Яндекс
+Experience:
 
-
+* 3 years of work experience in the web studio (site layout, some programming, installation on CMF, some integrations API)

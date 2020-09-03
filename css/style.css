@@ -1,6 +1,6 @@
 body {
 	position: relative;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Kumbh Sans', sans-serif;
 	font-size: 18px;
 	line-height: normal;
 	color: #39465c;
@@ -8,7 +8,6 @@ body {
 
 h1 {
 	margin-top: 0;
-	font-family: 'Lobster', cursive, sans-serif;
 	letter-spacing: 0.15em;
 }
 
@@ -34,6 +33,7 @@ img {
 	margin: 0 auto;
     border: 5px solid #ffffff;
 	border-radius: 50%;
+    object-fit: cover;
 }
 
 .container {
@@ -59,7 +59,11 @@ img {
 
 .item-head {
 	padding: 30px;
-	background-color: #ffa050;
+	background: rgb(232,121,35);
+	background: -moz-linear-gradient(0deg, rgba(232,121,35,1) 0%, rgba(232,213,35,1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(232,121,35,1) 0%, rgba(232,213,35,1) 100%);
+	background: linear-gradient(0deg, rgba(232,121,35,1) 0%, rgba(232,213,35,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e87923",endColorstr="#e8d523",GradientType=1);
 }
 
 .item-head h1 {
