@@ -1,1 +1,1 @@
-# rsschool-cv
+# https://nedvill.github.io/rsschool-cv/cv
