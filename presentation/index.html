@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/vue.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>Vue.js</h1></section>
+				<section>
+					<h2>Dmitry Polyakov</h2>
+					<ul>
+						<li>I'm 25 years old</li>
+						<li>I live in the Tver city</li>
+						<li>I have a higher technical education</li>
+						<li>I work in the company Site Elite Studio, engaged in the development of sites on MODX CMF</li>
+					</ul>
+				</section>
+				<section>
+					<h3>What is vue?</h3>
+					<p>Vue is a progressive framework for building user interfaces. Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.</p>
+				</section>
+				<section>
+					<h3>History</h3>
+					<p>The creator of Vue.js is Evan You, a former employee of Google and the Meteor Dev Group. He began to develop the framework in 2013, and in February 2014 the first public release took place. Vue is widely used in companies, for example: Alibaba, Baidu, Xiaomi, Sina Weibo, GitLab and other.</p>
+				</section>
+				<section>
+					<p>At the end of September 2016, Vue.js 2.0 was released, even better and with a focus on performance - now it uses a virtual DOM, supports server rendering, the ability to use JSX. Although it is currently supported only by the community, it keeps its worth even at the level of such giants as Google and Facebook.</p>
+					<p>The latest version at the moment is 2.6.11.</p>
+				</section>
+				<section>
+					<h3>Example</h3>
+					<p>At the core of Vue.js is a system that enables us to declaratively render data to the DOM using straightforward template syntax:</p>
+					<pre>
+					<code class="hljs applescript" data-trim data-line-numbers>
+            <div id="app">
+              {{ message }}
+            </div>
+          </code>
+          <code class="hljs haskell" data-trim data-line-numbers>
+            var app = new Vue({
+              el: '#app',
+              data: {
+                message: 'Hello Vue!'
+              }
+            })
+          </code>
+          <code class="hljs applescript" data-trim data-line-numbers>
+						Hello Vue!
+          </code>
+        </section>
+        <section>
+          <p>We created first Vue app! This looks pretty similar to rendering a string template, but Vue has done a lot of work under the hood. The data and the DOM are now linked, and everything is now reactive.</p>
+        </section>
+        <section>
+          <p>Note that we no longer have to interact with the HTML directly. A Vue app attaches itself to a single DOM element (#app in our case) then fully controls it. The HTML is our entry point, but everything else happens within the newly created Vue instance.</p>
+        </section>
+        <section>
+          <p>In addition to text interpolation, we can also bind element attributes like this:</p>
+          <pre>
+          <code class="hljs applescript" data-trim data-line-numbers>
+            <div id="app-2">
+              <span v-bind:title="message">
+                Hover your mouse over me for a few seconds
+                to see my dynamically bound title!
+              </span>
+            </div>
+          </code>
+          <code class="hljs haskell" data-trim data-line-numbers>	
+            var app2 = new Vue({
+              el: '#app-2',
+              data: {
+              message: 'You loaded this page on '
+                + new Date().toLocaleString()
+              }
+            })
+          </code>
+          </pre>
+        </section>
+        <section>
+          <p>The v-bind is directive. Directives are prefixed with v- to indicate that they are special attributes provided by Vue, and as you may have guessed, they apply special reactive behavior to the rendered DOM.</p>
+        </section>
+        <section>
+          <h3>A bit of comparison with React</h3>
+          <p>React and Vue share many similarities. They both:</p>
+          <ul>
+            <li>utilize a virtual DOM</li>
+            <li>provide reactive and composable view components</li>
+            <li>maintain focus in the core library, with concerns such as routing and global state management handled by companion libraries</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Runtime Performance</h3>
+          <p>Both React and Vue are exceptionally and similarly fast, so speed is unlikely to be a deciding factor in choosing between them.</p>
+          <p>In React, when a component’s state changes, it triggers the re-render of the entire component sub-tree, starting at that component as root. To avoid unnecessary re-renders of child components, you need to either use PureComponent or implement shouldComponentUpdate whenever you can.</p>
+        </section>
+        <section>
+          <p>In Vue, a component’s dependencies are automatically tracked during its render, so the system knows precisely which components actually need to re-render when state changes. Each component can be considered to have shouldComponentUpdate automatically implemented for you, without the nested component caveats.</p>
+        </section>
+        <section>
+          <h3>HTML & CSS</h3>
+          <p>In React, everything is just JavaScript. Not only are HTML structures expressed via JSX, the recent trends also tend to put CSS management inside JavaScript as well.</p>
+          <p>Vue embraces classic web technologies and builds on top of them.</p>
+        </section>
+        <section>
+          <h3>A bit of comparison with Angular 2:</h3>
+          <h4>TypeScript</h4>
+          <p>Angular essentially requires using TypeScript, given that almost all its documentation and learning resources are TypeScript-based.
+						TypeScript has its benefits - static type checking can be very useful for large-scale applications, and can be a big productivity boost
+						for developers with backgrounds in Java and C#.</p>
+        </section>
+        <section>
+          <p>However, not everyone wants to use TypeScript. In many smaller-scale use cases, introducing a type system may result in more overhead than productivity gain. In those cases you’d be better off going with Vue instead, since using Angular without TypeScript can be challenging.</p>
+        </section>
+        <section>
+          <p>Finally, although not as deeply integrated with TypeScript as Angular is, Vue also offers official typings and official decorator for those who wish to use TypeScript with Vue.</p>
+        </section>
+        <section>
+          <h3>Runtime Performance</h3>
+          <p>Both frameworks are exceptionally fast, with very similar metrics on benchmarks.</p>
+        </section>
+        <section>
+          <h3>Size</h3>
+          <p>Recent versions of Angular, with AOT compilation and tree-shaking, have been able to get its size down considerably. However, a full-featured Vue 2 project with Vuex + Vue Router included (~30KB gzipped) is still significantly lighter than an out-of-the-box, AOT-compiled application generated by angular-cli (~65KB gzipped).</p>
+        </section>
+        <section>
+          <h3>Learning Curve</h3>
+          <p>To get started with Vue, all you need is familiarity with HTML and ES5 JavaScript (i.e. plain JavaScript). With these basic skills, you can start building non-trivial applications within less than a day of reading the guide.</p>
+        </section>
+        <section>
+          <p>Angular’s learning curve is much steeper. The API surface of the framework is huge and as a user you will need to familiarize yourself
+						with a lot more concepts before getting productive. The complexity of Angular is largely due to its design goal of targeting only large,
+						complex applications - but that does make the framework a lot more difficult for less-experienced developers to pick up.</p>
+        </section>
+        <section>
+          <h2>Thank you for the attention!</h1>
+        </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
